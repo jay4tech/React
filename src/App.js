@@ -8,6 +8,7 @@ class App extends Component {
      { name:'Jay', age:20, belt:'Black',id:3}
     ]
   }
+  
   render() {
 
     return (
