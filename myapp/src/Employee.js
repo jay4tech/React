@@ -3,15 +3,22 @@ import React, { Component } from 'react';
 class Employee extends Component {
     
     render(){
-        console.log(this.props)
-        const {name,age,salary}=this.props
-        return(
-            <div className="employee">
-                <div>Name: {name}</div>
-                <div>Age: {age}</div>
-                <div>Salary:{salary}</div>
+        const {employees}=this.props;
+        const employeeList= employees.map(employee=>{
+            return(
+            <div className="employee" key={employee.id}>
+                <div>Name: {employee.name}</div>
+                <div>Age: {employee.age}</div>
+                <div>Salary:{employee.salary}</div>
                 <hr/>
             </div>
+            )
+        })
+        return(
+            <div className="employee-list">
+            {employeeList}
+            </div>
+           
         )
     }
 }
