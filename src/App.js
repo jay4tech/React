@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import Ninjas from './Ninjas';
+import Employee from './Employee';
+import AddEmployee from './AddEmployee';
+
 class App extends Component {
   state={
-    ninjas:[
-     { name:'Jay', age:25 ,belt:'Black',id:1},
-     { name:'Jaya', age:50, belt:'Green',id:2},
-     { name:'Jay', age:20, belt:'Black',id:3}
+    employees:[
+     { name:'Jay', age:25 ,salary:50000,id:1},
+     { name:'Jaya', age:50, salary:40000,id:2},
+     { name:'Raj', age:20, salary:100000,id:3}
     ]
   }
   
@@ -15,7 +17,8 @@ class App extends Component {
       <div className="App">
         <h1>My First React App</h1>
         <p>Welcome :)</p>
-        <Ninjas ninjas={this.state.ninjas}></Ninjas>
+        <Employee employees={this.state.employees}></Employee>
+        <AddEmployee/>
       </div>
     );
   }
