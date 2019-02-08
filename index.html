@@ -18,12 +18,23 @@
             name:'Jay',
             age:30
           }
-              
+          handleChange=(e)=>{
+            this.setState({
+              name:e.target.value
+            })
+          }
+          haldleSubmit = (e)=>{
+            e.preventDefault();
+            console.log('Submitted !', this.state.name)
+          }     
           render(){
             return(
               <div className="app-content">
-                <h1>Hello, Jay!</h1>         
-                <button> Click Me</button>
+                <h1>Hello, {this.state.name}!</h1> 
+                <form onSubmit={this.haldleSubmit}>        
+                <input type="text" onChange={this.handleChange}></input>
+                <button > Submit</button>
+              </form>
               </div>
             )
           }
