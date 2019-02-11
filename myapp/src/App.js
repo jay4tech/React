@@ -17,12 +17,21 @@ class App extends Component {
       employees: employees
     })
   }
+  deleteEmployee = (id) => {
+    console.log(id)
+    let employees = this.state.employees.filter(employee => {
+      return employee.id !== id
+    });
+    this.setState({
+      employees: employees
+    })
+  }
   render() {
     return (
       <div className="App">
         <h1>My First React App</h1>
         <p>Welcome students</p>
-        <Employee employees={this.state.employees} />
+        <Employee deleteEmployee={this.deleteEmployee} employees={this.state.employees} />
         <AddEmployee addEmployee={this.addEmployee} />
       </div>
     );
