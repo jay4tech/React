@@ -7,14 +7,14 @@ class AddEmployee extends Component {
         age: null,
         salary: null
     }
-    handleChange=(e)=>{
+    handleChange = (e) => {
         this.setState({
             [e.target.id]: e.target.value
         })
     }
-    handleSubmit=(e)=>{
+    handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state)
+        this.props.addEmployee(this.state);
     }
     render() {
         return (
