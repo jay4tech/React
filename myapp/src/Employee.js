@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Employee.css'
 const Employee = ({ employees ,deleteEmployee}) => {
     const employeeList = employees.map(employee => {
         return (

@@ -1,0 +1,9 @@
+body{
+    background:darkolivegreen;
+    transition: all 1s;
+}
+
+.employee form{
+    background: #ffffff;
+    padding: 18px;
+}
