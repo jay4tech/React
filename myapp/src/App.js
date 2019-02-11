@@ -26,6 +26,13 @@ class App extends Component {
       employees: employees
     })
   }
+  componentDidMount(){
+    console.log('component mounted')
+  }
+  componentDidUpdate(prevProps,prevState){
+    console.log('Componet Updated')
+    console.log(prevProps,prevState)
+  }
   render() {
     return (
       <div className="App">
